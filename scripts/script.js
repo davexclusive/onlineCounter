@@ -1,5 +1,6 @@
 const container = document.querySelector('.js-container');
   
+// Creation of the HTML of the counter
 container.innerHTML = 
     `
     <div class="counter-value js-counter-value">0</div>
@@ -38,7 +39,7 @@ const memoryElement = document.querySelector('.js-memory-element');
 const memoryButton = document.querySelector('.js-memory-element-button');
 const resetMemoryButton = document.querySelector('.js-reset-memory-button');
 
-
+// Set the local storage to save the values after reload
 let counterValue = localStorage.getItem('counterValue') ? parseInt(localStorage.getItem('counterValue')) : 0;
 let increaseByNumber = 1;
 let memoryValue = localStorage.getItem('memoryValue') ? parseInt(localStorage.getItem('memoryValue')) : 0;
@@ -46,6 +47,7 @@ let memoryValue = localStorage.getItem('memoryValue') ? parseInt(localStorage.ge
 updateCounter();
 hideMemory();
 
+// Function to display the value of the counter
 function updateCounter() {
   counterElement.textContent = counterValue;
   localStorage.setItem('counterValue', counterValue);
@@ -63,6 +65,7 @@ function updateMemory() {
   resetMemoryButton.disabled = memoryValue <= 0;
 }
 
+// Function to adapt the font size of the counter
 function adjustFontSize() {
   let value = counterElement.textContent;
   let fontSize = 120;
@@ -74,6 +77,8 @@ function adjustFontSize() {
 
   counterElement.style.fontSize = fontSize + 'px';
 }
+
+//Creation of Buttons 
 
 incrementButton.addEventListener('click', () => {
   counterValue += increaseByNumber;
@@ -138,6 +143,7 @@ resetMemoryButton.addEventListener('click', () => {
   }
 });
 
+//Function to hide the memory value if is 0
 function hideMemory () {
   if (memoryValue === 0) {
     document.querySelector('.js-memory-element').style.visibility = 'hidden';
