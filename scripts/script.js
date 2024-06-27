@@ -3,15 +3,28 @@ const container = document.querySelector('.js-container');
 container.innerHTML = 
     `
     <div class="counter-value js-counter-value">0</div>
-    <button class="increment-button js-increment-button">+</button>
-    <button class="decrement-button js-decrement-button">-</button>
-    <button class="reset-button js-reset-button">Reset</button>
-    <button class="start-from-button js-start-from-button">Start from</button>
-    <button class="increase-by-button js-increase-by-button">Increase by</button>
-    <div class="memory-element js-memory-element">0</div>
-    <button class="memory-element-button js-memory-element-button">M</button>
-    <button class="reset-memory-button js-reset-memory-button">Reset M</button>
 
+    <div class="plus-minus-button">
+      <button class="increment-button js-increment-button">+</button>
+      <button class="decrement-button js-decrement-button">-</button>
+    </div>
+
+    <div class="reset-row">
+      <button class="reset-button js-reset-button">Reset</button>
+    </div>
+
+    <div class="mod-button">
+      <button class="start-from-button js-start-from-button">Start from</button>
+      <button class="increase-by-button js-increase-by-button">Increase by</button>
+    </div>
+
+    
+
+    <div class="mod-button">
+      <div class="memory-element js-memory-element">0</div>
+      <button class="memory-element-button js-memory-element-button">M</button>
+      <button class="reset-memory-button js-reset-memory-button">Reset M</button>
+    </button>
 
     `;
   
@@ -31,12 +44,14 @@ let increaseByNumber = 1;
 let memoryValue = localStorage.getItem('memoryValue') ? parseInt(localStorage.getItem('memoryValue')) : 0;
 
 updateCounter();
+hideMemory();
 
 function updateCounter() {
   counterElement.textContent = counterValue;
   localStorage.setItem('counterValue', counterValue);
 
   decrementButton.disabled = counterValue <= 0;
+  adjustFontSize();
 };
 
 updateMemory();
@@ -44,6 +59,20 @@ updateMemory();
 function updateMemory() {
   memoryElement.textContent = memoryValue;
   localStorage.setItem('memoryValue', memoryValue);
+
+  resetMemoryButton.disabled = memoryValue <= 0;
+}
+
+function adjustFontSize() {
+  let value = counterElement.textContent;
+  let fontSize = 120;
+
+  if (value.length > 3) {
+    fontSize = 120 - (value.length - 3) * 20;
+    if (fontSize < 40) fontSize = 40;
+  }
+
+  counterElement.style.fontSize = fontSize + 'px';
 }
 
 incrementButton.addEventListener('click', () => {
@@ -60,8 +89,12 @@ decrementButton.addEventListener('click', () => {
 });
 
 resetButton.addEventListener('click', () => {
-  counterValue = 0
+  let resetQu = confirm('Are you sure you want to reset counter and settings?');
+   if (resetQu == true) { 
+  counterValue = 0;
+  increaseByNumber = 1;
   updateCounter();
+  } 
 });
 
 
@@ -75,7 +108,6 @@ startFromButton.addEventListener('click', () => {
   } else {
     alert('Please digit a valid number');
   }
- 
 });
 
 
@@ -94,9 +126,24 @@ increaseByButton.addEventListener('click', () => {
 memoryButton.addEventListener('click', () => {
   memoryValue = counterValue;
   updateMemory();
+  hideMemory();
 })
 
 resetMemoryButton.addEventListener('click', () => {
+  resetQu = confirm('Are you sure you want to reset the memory?');
+  if (resetQu == true) {
   memoryValue = 0;
   updateMemory();
+  hideMemory();
+  }
 });
+
+function hideMemory () {
+  if (memoryValue === 0) {
+    document.querySelector('.js-memory-element').style.visibility = 'hidden';
+  } else {
+    document.querySelector('.js-memory-element').style.visibility = 'visible';
+  }
+}
+
+adjustFontSize();

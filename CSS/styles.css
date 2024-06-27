@@ -1,0 +1,272 @@
+
+@font-face {
+  font-family: 'GT-America';
+  src: url(GT-America-Expanded-Medium.woff2) format(woff2);
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'GT-America';
+  src: url(GT-America-Mono-Regular.woff2) format(woff2);
+  font-style: normal;
+  font-weight: 500;
+}
+
+html {
+  display: scroll;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+body {
+  font-family: 'GT-America', sans-serif;
+  font-weight: 400;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.counter-title {
+  font-family: 'GT-America', monospace;
+  font-weight: 500;
+  text-align: center;
+  font-weight: 100;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  margin-left: -90px;
+  font-size: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .counter-title {
+    margin-top: 40px;
+  }
+}
+
+
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.counter-value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 230px;
+  text-align: center;
+  font-size: 120px;
+  font-family: 'GT-America', monospace;
+  font-weight: 500;
+  margin-bottom: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+  color: #0f1012;
+  background-color: #7878781a;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+@media screen and (max-width: 465px) {
+  .counter-value {
+    margin-top: 10px;
+  }
+}
+
+.increment-button,
+.decrement-button {
+  display: inline-flex;
+  flex-direction: row;
+  font-size: 50px;
+  padding: 50px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  margin-bottom: 10px;
+  background-color: hsla(0, 0%, 100%, 0.2);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+@media screen and (max-width: 465px) {
+  .increment-button,
+  .decrement-button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.increment-button {
+  background-color: #237248;
+  color: white;
+}
+
+.increment-button:hover {
+  background-color: #2c8153;
+}
+
+.increment-button:active {
+  background-color: #2c8153;
+  transform: translateY(1px);
+}
+
+.decrement-button {
+  background-color: #7878781a;
+  color: #0071e3;
+}
+
+.decrement-button:hover {
+  background-color: #aba9a91a;
+}
+
+.decrement-button:active {
+  background-color: #aba9a91a;
+  transform: translateY(1px);
+}
+
+.plus-minus-button {
+  display: flex;
+  gap: 20px;
+
+}
+
+.reset-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.reset-button {
+  font-size: 20px;
+  padding-left: 110px;
+  padding-right: 110px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  color: #f0f0f0;
+  background-color: #C8102E;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+.reset-button:hover {
+  background-color: #e24f68;
+}
+
+.reset-button:active {
+  background-color: #e24f68;
+  transform: translateY(1px);
+}
+
+
+@media screen and (max-width: 465px) {
+  .reset-button {
+    margin-bottom: 15px;
+  }
+}
+
+.mod-button {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.start-from-button,
+.increase-by-button,
+.memory-element-button,
+.reset-memory-button,
+.memory-element {
+  font-size: 16px;
+  padding-left: 29px;
+  padding-right: 29px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  background-color: hsla(0, 0%, 100%, 0.2);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+.reset-memory-button {
+  background-color: #C8102E;
+  color: white;
+}
+
+.reset-memory-button:hover {
+  background-color: #e24f68
+}
+
+.reset-memory-button:active {
+  background-color: #e24f68;
+  transform: translateY(1px);
+}
+
+.start-from-button {
+  background-color: #0071e3;
+  color: #f0f0f0;
+}
+
+.start-from-button:hover {
+  background-color: #2f83d6;
+}
+
+.start-from-button:active {
+  background-color: #2f83d6;
+  transform: translateY(1px);
+}
+
+.increase-by-button {
+  background-color: #7878781a;
+}
+
+.increase-by-button:hover {
+  background-color: #aba9a91a;
+}
+
+.increase-by-button:active {
+  background-color: #aba9a91a;
+  transform: translateY(1px);
+}
+
+.memory-element-button {
+  background-color: rgb(240, 90, 34);
+  color: #f0f0f0;
+}
+
+.memory-element-button:hover {
+  background-color: rgb(232, 116, 73);
+}
+
+.memory-element-button:active {
+  background-color: rgb(232, 116, 73);
+  transform: translateY(1px);
+}
+
+.memory-element {
+  background-color: #7878781a;
+  font-weight: 700;
+}
+
+.footer-credits {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+}
+
