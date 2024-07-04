@@ -2,11 +2,11 @@
 
 <!-- PROJECT -->
 <br />
-<div align="center">
+<div align="left">
 
-  <h3 align="center">Online Counter</h3>
+  <h3 align="left">Online Counter</h3>
 
-  <p align="center">
+  <p align="left">
     An awesome, lightweight online counter!
     <br />
     <br />
@@ -43,7 +43,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![alt text](/assets/images/online-counter-app.png)
+![alt text](/assets/images/online-counter-app-1.png)
 
 The Online Counter is a simple intuitive tool designed for counting increments and decrements through user interaction.
 The application provides a user-friendly interface with + (increment) and - (decrement) buttons that allow users to easily adjust the count value displayed on the screen. 
@@ -56,9 +56,9 @@ This can be particularly useful in various scenarios, such as tracking the numbe
 
 ### Built With
 
-* [![HTML]]
-* [![CSS]]
-* [![JavaScript]]
+* HTML
+* CSS
+* JavaScript
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -72,9 +72,6 @@ This is an example of how you may give instructions on setting up your project l
 To get a local copy up and running follow these simple example steps.
 
 ### Installation
-
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
 
 1. Clone the repo
    ```sh
@@ -95,39 +92,39 @@ _Below is an example of how you can instruct your audience on installing and set
 
 ## Display Value
 
-![alt text](/assets/images/display-value.png)
+[alt text](/assets/images/display-value.png)
 
 The current value will be displayed in this section. By increasing of the numbers the font size will be adapt.
 
 
 ## Plus Minus Buttons
 
-!![alt text](/assets/images/plus-minus-counter.png)
+![alt text](/assets/images/plus-minus-counter.png)
 
 The plus/minus buttons allow the user to adjust the count value displayed above. The minus button will be deactivated if the number is = 0.
 
 ## Reset Button
 
-!![alt text](/assets/images/reset-counter.png)
+![alt text](/assets/images/reset-counter.png)
 
 The reset button allows to reset the main counter, the settings and funtions will be returned in default.
 
 ## Increase by Button
 
-!![alt text](/assets/images/increase%20by%20value.png)
+![alt text](/assets/images/increase%20by%20value.png)
 
 The increase button allows to choose the number you want to increase the counter.
 
 
 ## Start from Button
 
-!![alt text](/assets/images/start-from-value.png)
+![alt text](/assets/images/start-from-value.png)
 
 The start from button allows to choose the counter value you want to start from.
 
 ## Memory Buttons
 
-!![alt text](/assets/images/memory-buttons.png)
+![alt text](/assets/images/memory-buttons.png)
 
 This buttons allows to memorize a value of the counter by pressing M. It's possibile to reset the memory by pressing Reset M. If the value is = 0 the memory counter disapear.
 
