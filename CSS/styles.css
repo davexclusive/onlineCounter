@@ -14,9 +14,15 @@
 }
 
 html {
-  display: scroll;
+  display: block;
   height: 100vh;
   overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    height: 80vh;
+  }
 }
 
 
