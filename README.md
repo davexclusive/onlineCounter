@@ -43,7 +43,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![alt text](/assets/images/online-counter-app-1.png)
+![alt text](/assets/images/online-counter-app-1.jpg)
 
 The Online Counter is a simple intuitive tool designed for counting increments and decrements through user interaction.
 The application provides a user-friendly interface with + (increment) and - (decrement) buttons that allow users to easily adjust the count value displayed on the screen. 
@@ -92,7 +92,7 @@ To get a local copy up and running follow these simple example steps.
 
 ## Display Value
 
-[alt text](/assets/images/display-value.png)
+![alt text](/assets/images/display-value.png)
 
 The current value will be displayed in this section. By increasing of the numbers the font size will be adapt.
 
